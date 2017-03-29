@@ -6,7 +6,7 @@
   "authors": [
     {
       "name": "author's name",
-      "email": "email@example.com"
+      "email": "  email@example.com"
     }
   ]
 }

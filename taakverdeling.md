@@ -1,10 +1,10 @@
 POST: evenements = Ebert
 
-Get: all events: Cédric
-per afspraak, event ID kunnen geven Cédric
+Get: all events: CÃ©dric
+per afspraak, event ID kunnen geven CÃ©dric
 events per personenen aanvragen Jelle
 events per datum kunnen opvragen, van tot Jelle
 op persoon en datum Jelle
 
-PHPUnit: Jasper, test POST evenementen
-	 Mike, test GET
+PHPUnit: Mike, test POST evenementen
+	 Jasper, test GET

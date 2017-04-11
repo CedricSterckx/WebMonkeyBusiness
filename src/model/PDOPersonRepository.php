@@ -9,4 +9,6 @@
 class PDOPersonRepository
 {
 
+    //Hier de methods die met db praat om met db dingens te doen
+
 }

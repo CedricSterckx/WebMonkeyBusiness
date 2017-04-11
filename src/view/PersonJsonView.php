@@ -9,4 +9,20 @@
 class PersonJsonView
 {
 
+    public  function render(array $data) : array {
+        $output = [];
+
+        if(isset($data['person'])){
+            $person  = $data['person'];
+            $output = [
+                'id' => $person->getId(),
+                'name' => $person->getName()
+            ];
+        }
+
+        return $output;
+    }
+
 }
+
+

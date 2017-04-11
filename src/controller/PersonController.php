@@ -8,5 +8,5 @@
  */
 class PersonController
 {
-
+//hier komen de method met routes
 }

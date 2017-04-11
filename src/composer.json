@@ -1,12 +1,8 @@
 {
-  "name": "vendor_name/package_name",
-  "description": "description_text",
-  "minimum-stability": "stable",
-  "license": "proprietary",
-  "authors": [
-    {
-      "name": "author's name",
-      "email": "email@example.com"
-    }
-  ]
+  "autoload": {
+    "api\\": "src/api",
+    "controller\\": "src/controller",
+    "model\\": "src/model",
+    "view\\": "src/view"
+  }
 }

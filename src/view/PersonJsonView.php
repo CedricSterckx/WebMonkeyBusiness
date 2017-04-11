@@ -1,4 +1,4 @@
-<?php
+<?php namespace view;
 
 /**
  * Created by PhpStorm.
@@ -6,17 +6,21 @@
  * Date: 08/04/2017
  * Time: 21:07
  */
+
+use \model\Person;
+
 class PersonJsonView
 {
 
-    public  function render(array $data) : array {
+    public  function render(array $data) {
         $output = [];
 
-        if(isset($data['person'])){
-            $person  = $data['person'];
+        if(isset($data['Person'])){
+            $person  = $data['Person'];
             $output = [
                 'id' => $person->getId(),
-                'name' => $person->getName()
+                'naam' => $person->getGebruikerNaam(),
+                'acheternaam' => $person->getGebruikerVoornaam()
             ];
         }
 

@@ -12,7 +12,11 @@ require "../../vendor/autoload.php";
 
 use \model\PDOPersonRepository;
 use \controller\PersonController;
-use \view\PersonJsonView;
+use \View\PersonJsonView;
+
+use \model\PDOEvent;
+use \controller\EventController;
+use \View\EventJsonView;
 
 $user = "root";
 $password = "";
@@ -27,10 +31,18 @@ try {
     $personPDORepository = new PDOPersonRepository($pdo);
     $personJsonView = new PersonJsonView();
     $personController = new PersonController($personPDORepository, $personJsonView);
+    $PDOEvent = new PDOEvent($pdo);
+    $EventJsonView = new EventJsonView();
+    $eventController = new EventController($PDOEvent, $EventJsonView);
     $router = new \AltoRouter();
     $router->setBasePath('/api');
     $router->map('GET', '/persons/[i:id]', function($id) use (&$personController){
         $personController->handleFindPersonById($id);
+    });
+    $router->map('POST', '/event/create/', function() use (&$eventController) {
+        $decodedEvent = json_decode($_POST);
+        $data = $decodedEvent['event'];
+        $eventController->handleUpdateOrCreateEvent($data);
     });
 
    $match = $router->match();

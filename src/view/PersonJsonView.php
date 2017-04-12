@@ -1,4 +1,4 @@
-<?php namespace view;
+<?php namespace View;
 
 /**
  * Created by PhpStorm.
@@ -6,8 +6,6 @@
  * Date: 08/04/2017
  * Time: 21:07
  */
-
-use \model\Person;
 
 class PersonJsonView
 {

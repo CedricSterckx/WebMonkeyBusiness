@@ -1,4 +1,7 @@
 <?php
+namespace model;
+
+use PDOException;
 
 /**
  * Created by PhpStorm.

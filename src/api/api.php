@@ -28,22 +28,23 @@ try {
 
     $pdo = new \PDO("mysql:host=$hostname; dbname=$database, $user, $password");
     $pdo->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
-    $personPDORepository = new PDOPersonRepository($pdo);
-    $personJsonView = new PersonJsonView();
-    $personController = new PersonController($personPDORepository, $personJsonView);
+//    $personPDORepository = new PDOPersonRepository($pdo);
+//    $personJsonView = new PersonJsonView();
+//    $personController = new PersonController($personPDORepository, $personJsonView);
     $PDOEvent = new PDOEvent($pdo);
     $EventJsonView = new EventJsonView();
     $eventController = new EventController($PDOEvent, $EventJsonView);
     $router = new \AltoRouter();
     $router->setBasePath('/api');
-    $router->map('GET', '/persons/[i:id]', function($id) use (&$personController){
-        $personController->handleFindPersonById($id);
-    });
+//    $router->map('GET', '/persons/[i:id]', function($id) use (&$personController){
+//        $personController->handleFindPersonById($id);
+//    });
     $router->map('POST', '/event/create/', function() use (&$eventController) {
         $decodedEvent = json_decode($_POST);
         $data = $decodedEvent['event'];
         $eventController->handleUpdateOrCreateEvent($data);
     });
+
 
    $match = $router->match();
 

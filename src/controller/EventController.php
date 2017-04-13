@@ -31,5 +31,43 @@ class EventController
         header('Content-Type: application/json');
         echo json_encode($this->Event);
     }
+
+    public function handleGetEventByEventId($data){
+        $this->Event->getEventByEventId($data);
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode($this->Event);
+    }
+
+    public function handleGetAllEvents(){
+        $this->Event->getAllEvents();
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode($this->Event);
+    }
+
+    public function handleGetEventByPersonId($data){
+        $this->Event->getEventByPersonId($data);
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode($this->Event);
+    }
+
+    //???
+    public function handleGetEventByDate($data){
+        $this->Event->getEventByDate($data['beginDate'], $data['endDate']);
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode($this->Event);
+    }
+
+    public function handleEventByPersonIdAndBeginAndEndDate($data){
+        $this->Event->getEventByEventId($data['id'], $data['beginDate'], $data['endDate']);
+        http_response_code(200);
+        header('Content-Type: application/json');
+        echo json_encode($this->Event);
+    }
+
+
 }
 

@@ -9,11 +9,18 @@
 class PDOPersonRepository
 {
 
-   public  $pdo;
-    //Hier de methods die met db praat om met db dingens te doen
 
-    public function __construct($pdo)
+    private $connection  = null;
+
+    public function __construct(\PDO $connection)
     {
+        $this->connection = $connection;
     }
 
+
+
+
 }
+
+
+

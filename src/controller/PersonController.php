@@ -1,4 +1,6 @@
 <?php namespace controller;
+use model\PDOPersonRepository;
+use View\PersonJsonView;
 
 /**
  * Created by PhpStorm.
@@ -15,6 +17,16 @@ class PersonController
 
 public function __construct($personPDORepository, $personJsonView)
 {
+    $this->PDOPersonRepository = new PDOPersonRepository($personPDORepository);
+    $this->PersonJsonView = new PersonJsonView($personJsonView);
 }
+
+    public function handleFindPersonById($id){
+
+
+
+    }
+
+
 
 }

@@ -17,14 +17,15 @@ class EventJsonView
         if(isset($data['event'])) {
             $event = $data['event'];
             $output = [
-                'id' => $event->getId(),
-                'naam' => $event->getNaam(),
-                'beginDatum' => $event->getBeginDatum(),
-                'eindDatum' => $event->getEindDatum(),
-                'KlantNummer' => $event->getKlantNummer(),
-                'Bezetting' => $event->getBezetting(),
-                'Kost' => $event->getKost(),
-                'Materialen' => $event->getMaterialen()
+                'id' => $event->getProjectId(),
+                'naam' => $event->getProjectNaam(),
+                'beginDatum' => $event->getProjectBeginDatum(),
+                'eindDatum' => $event->getProjectEindDatum(),
+                'KlantNummer' => $event->getProjectKlantNummer(),
+                'Bezetting' => $event->getProjectBezetting(),
+                'Kost' => $event->getProjectKost(),
+                'Materialen' => $event->getProjectMaterialen(),
+                'GebruikerId' => $event->getGebruikerId()
             ];
         }
         return $output;

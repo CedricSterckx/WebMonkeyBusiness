@@ -15,6 +15,9 @@ class EventController
     private $Event;
     private $JsonView;
 
+    //wat als het fout gaat, het retourneerd geen bad request http code
+
+
     public function __construct($PDOEvent, $EventJsonView)
     {
         $this->Event = new PDOEvent($PDOEvent);
@@ -53,7 +56,7 @@ class EventController
         echo json_encode($this->Event);
     }
 
-    //???
+
     public function handleGetEventByDate($data){
         $this->Event->getEventByDate($data['beginDate'], $data['endDate']);
         http_response_code(200);
@@ -61,8 +64,9 @@ class EventController
         echo json_encode($this->Event);
     }
 
+    //[235,35-41-45, 564,54,154]
     public function handleEventByPersonIdAndBeginAndEndDate($data){
-        $this->Event->getEventByEventId($data['id'], $data['beginDate'], $data['endDate']);
+        $this->Event->getEventByPersonIdAndBeginAndEndDate($data['id'], $data['beginDate'], $data['endDate']);
         http_response_code(200);
         header('Content-Type: application/json');
         echo json_encode($this->Event);

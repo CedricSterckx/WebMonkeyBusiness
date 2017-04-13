@@ -39,7 +39,7 @@ class PDOEvent
 
     public function UpdateEvent($ProjectId, $ProjectNaam, $ProjectBeginDatum, $ProjectEindDatum, $ProjectKlantNummer, $ProjectBezetting, $ProjectKost, $ProjectMaterialen)
     {
-        //???
+
         try {
             $statement = $this->connection->prepare('UPDATE projecten WHERE ProjectID=?'.
                 '(ProjectNaam, ProjectBeginDatum, ProjectEindDatum, ProjectKlantNummer, ProjectBezetting, ProjectKost, ProjectMaterialen)'.
@@ -54,7 +54,7 @@ class PDOEvent
             $statement->bindParam(8, $ProjectMaterialen);
             $statement->execute();
         } catch (PDOException $e) {
-            print 'Excpetion!: ' . $e->getMessage();
+            print 'Exception while trying update an event: ' . $e->getMessage();
         }
     }
 
@@ -100,7 +100,7 @@ class PDOEvent
     public function getEventByDate($beginDate, $endDate){
         try{
             $statement = $this->connection->prepare('SELECT * 
-            FROM projecten WHERE ProjectBeginDatum = :beginDate AND 	ProjectEindDatum= :endDate');
+            FROM projecten WHERE ProjectBeginDatum = :beginDate AND ProjectEindDatum= :endDate');
             $statement->bindValue(':beginDate', $beginDate);
             $statement->bindValue(':endDate' , $endDate);
             $statement->execute();

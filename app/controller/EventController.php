@@ -27,12 +27,13 @@ class EventController
     public function handleUpdateOrCreateEvent($data)
     {
         if (!isset($data['id'])) {
-            $this->event->addEvent($data['naam'], $data['beginDatum'], $data['eindDatum'], $data['KlantNummer'], $data['Bezetting'], $data['Kost'], $data['Materialen']);
+            $createdEventId = $this->event->addEvent($data['naam'], $data['beginDatum'], $data['eindDatum'], $data['KlantNummer'], $data['Bezetting'], $data['Kost'], $data['Materialen'], $data['GebruikerId']);
         } else {
-            $this->event->UpdateEvent($data['id'], $data['naam'], $data['beginDatum'], $data['eindDatum'], $data['KlantNummer'], $data['Bezetting'], $data['Kost'], $data['Materialen']);
+            $createdEventId = $this->event->UpdateEvent($data['id'], $data['naam'], $data['beginDatum'], $data['eindDatum'], $data['KlantNummer'], $data['Bezetting'], $data['Kost'], $data['Materialen'], $data['GebruikerId']);
         }
-        http_response_code(201);
-        $this->view->draw([]);
+        $this->handleGetEventByEventId($createdEventId);
+        $view = new EventJsonView();
+        $view->draw(compact($data));
     }
 
     public function handleGetEventByEventId($data)
@@ -58,17 +59,17 @@ class EventController
     }
 
 
-    public function handleGetEventByDate($data)
+    public function handleGetEventByDate($from, $until)
     {
-        $events = $this->event->getEventByDate($data['beginDate'], $data['endDate']);
+        $events = $this->event->getEventByDate($from, $until);
         $view = new AllEventsJsonView();
         $view->draw(compact('events'));
     }
 
     //[235,35-41-45, 564,54,154]
-    public function handleEventByPersonIdAndBeginAndEndDate($data)
+    public function handleEventByPersonIdAndBeginAndEndDate($id, $from, $until)
     {
-        $events = $this->event->getEventByPersonIdAndBeginAndEndDate($data['id'], $data['beginDate'], $data['endDate']);
+        $events = $this->event->getEventByPersonIdAndBeginAndEndDate($id, $from, $until);
         $view = new AllEventsJsonView();
         $view->draw(compact('events'));
     }

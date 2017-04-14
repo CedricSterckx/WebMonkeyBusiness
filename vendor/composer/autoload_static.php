@@ -31,15 +31,12 @@ class ComposerStaticInit5538ae723bc4d377578a7bf68932b973
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
         'App\\Controller\\EventController' => __DIR__ . '/../..' . '/app/controller/EventController.php',
-        'App\\Controller\\PersonController' => __DIR__ . '/../..' . '/app/controller/PersonController.php',
         'App\\Model\\Event' => __DIR__ . '/../..' . '/app/model/Event.php',
+        'App\\Model\\EventFactory' => __DIR__ . '/../..' . '/app/model/EventFactory.php',
         'App\\Model\\PDOEvent' => __DIR__ . '/../..' . '/app/model/PDOEvent.php',
-        'App\\Model\\PDOPersonRepository' => __DIR__ . '/../..' . '/app/model/PDOPersonRepository.php',
-        'App\\Model\\Person' => __DIR__ . '/../..' . '/app/model/Person.php',
         'App\\View\\AllEventsJsonView' => __DIR__ . '/../..' . '/app/view/AllEventsJsonView.php',
         'App\\View\\EventJsonView' => __DIR__ . '/../..' . '/app/view/EventJsonView.php',
         'App\\View\\JsonResponse' => __DIR__ . '/../..' . '/app/view/JsonResponse.php',
-        'App\\View\\PersonJsonView' => __DIR__ . '/../..' . '/app/view/PersonJsonView.php',
         'App\\View\\Response' => __DIR__ . '/../..' . '/app/view/Response.php',
     );
 

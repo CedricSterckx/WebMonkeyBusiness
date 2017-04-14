@@ -15,7 +15,6 @@ class EventJsonView extends JsonResponse
     public function render(array $data)
     {
         $output = [];
-
         if(isset($data['event'])) {
             $event = $data['event'];
             $output = [

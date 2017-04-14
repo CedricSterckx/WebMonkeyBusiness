@@ -19,12 +19,12 @@ class PDOEvent
         $this->connection = $connection;
     }
 
-    public function addEvent($projectNaam, $projectBeginDatum, $projectEindDatum, $projectKlantNummer, $projectBezetting, $projectKost, $projectMaterialen)
+    public function addEvent($projectNaam, $projectBeginDatum, $projectEindDatum, $projectKlantNummer, $projectBezetting, $projectKost, $projectMaterialen, $gebruikerID)
     {
         try {
-            $statement = $this->connection->prepare('INSERT INTO projecten' .
-                '(ProjectNaam, ProjectBeginDatum, ProjectEindDatum, ProjectKlantNummer, ProjectBezetting, ProjectKost, ProjectMaterialen)' .
-                ' VALUES (?, ?, ?, ?, ?, ?, ?);');
+            $statement = $this->connection->prepare('INSERT INTO projecten ' .
+                '(ProjectNaam, ProjectBeginDatum, ProjectEindDatum, ProjectKlantNummer, ProjectBezetting, ProjectKost, ProjectMaterialen, GebruikerID)' .
+                ' VALUES (?, ?, ?, ?, ?, ?, ?, ?);');
             $statement->bindParam(1, $projectNaam);
             $statement->bindParam(2, $projectBeginDatum);
             $statement->bindParam(3, $projectEindDatum);
@@ -32,8 +32,11 @@ class PDOEvent
             $statement->bindParam(5, $projectBezetting);
             $statement->bindParam(6, $projectKost);
             $statement->bindParam(7, $projectMaterialen);
+            $statement->bindParam(8, $gebruikerID);
             $statement->execute();
 
+            $last_id = $this->connection->lastInsertId();
+            return $last_id;
             //
 
         } catch (PDOException $e) {
@@ -41,22 +44,26 @@ class PDOEvent
         }
     }
 
-    public function UpdateEvent($ProjectId, $ProjectNaam, $ProjectBeginDatum, $ProjectEindDatum, $ProjectKlantNummer, $ProjectBezetting, $ProjectKost, $ProjectMaterialen)
+    public function UpdateEvent($projectId, $projectNaam, $projectBeginDatum, $projectEindDatum, $projectKlantNummer, $projectBezetting, $projectKost, $projectMaterialen, $gebruikerID)
     {
+        $sql = "UPDATE projecten SET
+            ProjectNaam = :naam, ProjectBeginDatum = :beginDatum , ProjectEindDatum = :eindDatum, ProjectKlantNummer = :klantNummer, ProjectBezetting = :bezetting, ProjectKost = :kost, ProjectMaterialen = :materialen, GebruikerID = :gebruikerId
+             WHERE ProjectID=:id";
 
         try {
-            $statement = $this->connection->prepare('UPDATE projecten WHERE ProjectID=?' .
-                '(ProjectNaam, ProjectBeginDatum, ProjectEindDatum, ProjectKlantNummer, ProjectBezetting, ProjectKost, ProjectMaterialen)' .
-                ' VALUES (?, ?, ?, ?, ?, ?, ?);');
-            $statement->bindParam(1, $ProjectId);
-            $statement->bindParam(2, $ProjectNaam);
-            $statement->bindParam(3, $ProjectBeginDatum);
-            $statement->bindParam(4, $ProjectEindDatum);
-            $statement->bindParam(5, $ProjectKlantNummer);
-            $statement->bindParam(6, $ProjectBezetting);
-            $statement->bindParam(7, $ProjectKost);
-            $statement->bindParam(8, $ProjectMaterialen);
+            $statement = $this->connection->prepare($sql);
+            $statement->bindValue(':id', $projectId);
+            $statement->bindValue(':naam', $projectNaam);
+            $statement->bindValue(':beginDatum', $projectBeginDatum);
+            $statement->bindValue(':eindDatum', $projectEindDatum);
+            $statement->bindValue(':klantNummer', $projectKlantNummer);
+            $statement->bindValue(':bezetting', $projectBezetting);
+            $statement->bindValue(':kost', $projectKost);
+            $statement->bindValue(':materialen', $projectMaterialen);
+            $statement->bindValue('gebruikerId', $gebruikerID);
             $statement->execute();
+
+            return $projectId;
         } catch (PDOException $e) {
             print 'Exception while trying update an event: ' . $e->getMessage();
         }
@@ -66,13 +73,13 @@ class PDOEvent
     public function getEventByPersonId($id)
     {
         $result = [];
-        $sql = "SELECT * FROM gebruikers WHERE GebruikerID =  :id";
+        $sql = "SELECT * FROM projecten WHERE GebruikerID =  :id";
 
         try {
             $statement = $this->connection->prepare($sql);
             $statement->bindValue(':id', $id);
             $statement->execute();
-            foreach($statement->fetchAll(PDO::FETCH_ASSOC) as $event) {
+            foreach($statement->fetchAll() as $event) {
                 array_push($result, EventFactory::create($event));
             }
 
@@ -81,7 +88,7 @@ class PDOEvent
             ' . $exception->getMessage());
         }
 
-
+        return $result;
     }
 
     public function getAllEvents()
@@ -106,7 +113,7 @@ class PDOEvent
     public function getEventByEventId($id)
     {
         $result = [];
-        $sql= "SELECT * FROM projecten WHERE EvenementID = :id";
+        $sql= "SELECT * FROM projecten WHERE ProjectID = :id";
         try {
 
             $statement = $this->connection->prepare($sql);
@@ -121,6 +128,8 @@ class PDOEvent
             print ('Exception occured while trying to get an event by an id
             ' . $exception->getMessage());
         }
+
+        return $result;
     }
 
     public function getEventByDate($beginDate, $endDate)
@@ -135,12 +144,13 @@ class PDOEvent
             foreach($statement->fetchAll() as $event) {
                 array_push($result, EventFactory::create($event));
             }
+
         } catch (\PDOException $exception) {
             print ('Exception occured while trying to get an event by an id
             ' . $exception->getMessage());
         }
+        return $result;
     }
-
 
     public function getEventByPersonIdAndBeginAndEndDate($id, $beginDate, $endDate)
     {
@@ -159,6 +169,7 @@ class PDOEvent
             print ('Exception occured while trying to get an event by an id
             ' . $exception->getMessage());
         }
+        return $result;
     }
 
 }

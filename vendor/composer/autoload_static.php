@@ -6,13 +6,48 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit5538ae723bc4d377578a7bf68932b973
 {
+    public static $prefixLengthsPsr4 = array (
+        'T' => 
+        array (
+            'Tests\\' => 6,
+        ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app',
+        ),
+    );
+
     public static $classMap = array (
         'AltoRouter' => __DIR__ . '/..' . '/altorouter/altorouter/AltoRouter.php',
+        'App\\Controller\\EventController' => __DIR__ . '/../..' . '/app/controller/EventController.php',
+        'App\\Controller\\PersonController' => __DIR__ . '/../..' . '/app/controller/PersonController.php',
+        'App\\Model\\Event' => __DIR__ . '/../..' . '/app/model/Event.php',
+        'App\\Model\\PDOEvent' => __DIR__ . '/../..' . '/app/model/PDOEvent.php',
+        'App\\Model\\PDOPersonRepository' => __DIR__ . '/../..' . '/app/model/PDOPersonRepository.php',
+        'App\\Model\\Person' => __DIR__ . '/../..' . '/app/model/Person.php',
+        'App\\View\\AllEventsJsonView' => __DIR__ . '/../..' . '/app/view/AllEventsJsonView.php',
+        'App\\View\\EventJsonView' => __DIR__ . '/../..' . '/app/view/EventJsonView.php',
+        'App\\View\\JsonResponse' => __DIR__ . '/../..' . '/app/view/JsonResponse.php',
+        'App\\View\\PersonJsonView' => __DIR__ . '/../..' . '/app/view/PersonJsonView.php',
+        'App\\View\\Response' => __DIR__ . '/../..' . '/app/view/Response.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit5538ae723bc4d377578a7bf68932b973::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit5538ae723bc4d377578a7bf68932b973::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit5538ae723bc4d377578a7bf68932b973::$classMap;
 
         }, null, ClassLoader::class);

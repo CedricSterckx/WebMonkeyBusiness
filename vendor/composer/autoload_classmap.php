@@ -7,4 +7,15 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AltoRouter' => $vendorDir . '/altorouter/altorouter/AltoRouter.php',
+    'App\\Controller\\EventController' => $baseDir . '/app/controller/EventController.php',
+    'App\\Controller\\PersonController' => $baseDir . '/app/controller/PersonController.php',
+    'App\\Model\\Event' => $baseDir . '/app/model/Event.php',
+    'App\\Model\\PDOEvent' => $baseDir . '/app/model/PDOEvent.php',
+    'App\\Model\\PDOPersonRepository' => $baseDir . '/app/model/PDOPersonRepository.php',
+    'App\\Model\\Person' => $baseDir . '/app/model/Person.php',
+    'App\\View\\AllEventsJsonView' => $baseDir . '/app/view/AllEventsJsonView.php',
+    'App\\View\\EventJsonView' => $baseDir . '/app/view/EventJsonView.php',
+    'App\\View\\JsonResponse' => $baseDir . '/app/view/JsonResponse.php',
+    'App\\View\\PersonJsonView' => $baseDir . '/app/view/PersonJsonView.php',
+    'App\\View\\Response' => $baseDir . '/app/view/Response.php',
 );

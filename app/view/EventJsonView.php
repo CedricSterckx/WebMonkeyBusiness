@@ -1,14 +1,16 @@
 <?php
-
-namespace View;
-
 /**
  * Created by PhpStorm.
  * User: Ebert Joris
  * Date: 11/04/2017
  * Time: 13:20
  */
-class EventJsonView
+
+namespace App\View;
+
+use App\View\JsonResponse;
+
+class EventJsonView extends JsonResponse
 {
     public function render(array $data)
     {
@@ -28,6 +30,7 @@ class EventJsonView
                 'GebruikerId' => $event->getGebruikerId()
             ];
         }
+
         return $output;
     }
 

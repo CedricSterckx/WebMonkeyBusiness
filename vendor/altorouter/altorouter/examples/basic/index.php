@@ -17,8 +17,8 @@ $match = $router->match();
 <h3>Current request: </h3>
 <pre>
 	Target: <?php var_dump($match['target']); ?>
-	Params: <?php var_dump($match['params']); ?>
-	Name: 	<?php var_dump($match['name']); ?>
+    Params: <?php var_dump($match['params']); ?>
+    Name: 	<?php var_dump($match['name']); ?>
 </pre>
 
 <h3>Try these requests: </h3>

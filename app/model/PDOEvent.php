@@ -88,7 +88,6 @@ class PDOEvent
                 array_push($result, EventFactory::create($event));
             }
 
-
         } catch (\PDOException $exception) {
             print('Exception occured while trying to get all events ' . $exception->getMessage());
         }

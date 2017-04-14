@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6ddcb7-90b1-466d-ba00-4165df913167" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/.htaccess" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/api/Api.php" afterPath="$PROJECT_DIR$/public/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/PDOEvent.php" afterPath="$PROJECT_DIR$/app/model/PDOEvent.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controller/EventController.php" afterPath="$PROJECT_DIR$/app/controller/EventController.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +21,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="EventController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="32" />
+            <state relative-caret-position="436">
+              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="40" />
               <folding>
                 <element signature="e#34#61#0#PHP" expanded="true" />
               </folding>
@@ -131,11 +128,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="708">
-              <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+            <state relative-caret-position="487">
+              <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
               <folding>
                 <element signature="e#150#173#0#PHP" expanded="true" />
               </folding>
@@ -203,13 +200,13 @@
         <option value="$PROJECT_DIR$/app/controller/PersonController.php" />
         <option value="$PROJECT_DIR$/app/model/EventFactory.php" />
         <option value="$PROJECT_DIR$/app/config/routes.php" />
-        <option value="$PROJECT_DIR$/app/controller/EventController.php" />
         <option value="$PROJECT_DIR$/app/api/Api.php" />
         <option value="$PROJECT_DIR$/public/Api.php" />
         <option value="$PROJECT_DIR$/public/.htaccess" />
         <option value="$PROJECT_DIR$/vendor/altorouter/altorouter/AltoRouter.php" />
         <option value="$PROJECT_DIR$/app/model/PDOEvent.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
+        <option value="$PROJECT_DIR$/app/controller/EventController.php" />
       </list>
     </option>
   </component>
@@ -446,12 +443,12 @@
       <workItem from="1492092833900" duration="11008000" />
       <workItem from="1492175712708" duration="2378000" />
       <workItem from="1492178138020" duration="4242000" />
-      <workItem from="1492189521552" duration="4326000" />
+      <workItem from="1492189521552" duration="4597000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50551000" />
+    <option name="totallyTimeSpent" value="50822000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -805,22 +802,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="40" column="7" lean-forward="true" selection-start-line="40" selection-start-column="7" selection-end-line="40" selection-end-column="32" />
+        <state relative-caret-position="487">
+          <caret line="36" column="7" lean-forward="true" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
           <folding>
-            <element signature="e#34#61#0#PHP" expanded="true" />
+            <element signature="e#150#173#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
+    <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="49" column="32" lean-forward="true" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        <state relative-caret-position="436">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="48" selection-end-column="40" />
           <folding>
-            <element signature="e#150#173#0#PHP" expanded="true" />
+            <element signature="e#34#61#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

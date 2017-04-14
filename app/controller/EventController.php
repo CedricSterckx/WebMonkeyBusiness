@@ -52,9 +52,9 @@ class EventController
 
     public function handleGetEventByPersonId($data)
     {
-        $this->event->getEventByPersonId($data);
-        http_response_code(200);
-        $this->view->draw([]);
+        $events = $this->event->getEventByPersonId($data);
+        $view = new AllEventsJsonView();
+        $view->draw(compact('events'));
     }
 
 

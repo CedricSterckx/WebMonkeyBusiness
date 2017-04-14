@@ -37,9 +37,9 @@ class EventController
 
     public function handleGetEventByEventId($data)
     {
-        $this->event->getEventByEventId($data);
-        http_response_code(200);
-        $this->view->draw([]);
+        $events = $this->event->getEventByEventId($data);
+        $view = new AllEventsJsonView();
+        $view->draw(compact('events'));
     }
 
     public function handleGetAllEvents()
@@ -60,17 +60,17 @@ class EventController
 
     public function handleGetEventByDate($data)
     {
-        $this->event->getEventByDate($data['beginDate'], $data['endDate']);
-        http_response_code(200);
-        $this->view->draw([]);
+        $events = $this->event->getEventByDate($data['beginDate'], $data['endDate']);
+        $view = new AllEventsJsonView();
+        $view->draw(compact('events'));
     }
 
     //[235,35-41-45, 564,54,154]
     public function handleEventByPersonIdAndBeginAndEndDate($data)
     {
-        $this->event->getEventByPersonIdAndBeginAndEndDate($data['id'], $data['beginDate'], $data['endDate']);
-        http_response_code(200);
-        $this->view->draw([]);
+        $events = $this->event->getEventByPersonIdAndBeginAndEndDate($data['id'], $data['beginDate'], $data['endDate']);
+        $view = new AllEventsJsonView();
+        $view->draw(compact('events'));
     }
 
 

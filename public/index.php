@@ -30,7 +30,7 @@ try {
     $eventController = new EventController($pdo);
     $router = new AltoRouter();
 
-    $router->setBasePath('/mb/public'); // Remove this if you do not have the sub map
+    $router->setBasePath('/public');
 
     $router->map('GET', '/events/', function () use (&$eventController) {
         $eventController->handleGetAllEvents();

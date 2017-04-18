@@ -6,7 +6,9 @@
  * Date: 14/04/2017
  * Time: 15:31
  */
-class EventControllerTest
+class EventControllerTest extends PhpUnit
 {
+
+
 
 }

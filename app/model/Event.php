@@ -11,15 +11,15 @@ namespace App\Model;
 class Event
 {
 
-    public $projectId;
-    public $projectNaam;
-    public $projectBeginDatum;
-    public $projectEindDatum;
-    public $projectKlantNummer;
-    public $projectBezetting;
-    public $projectKost;
-    public $projectMaterialen;
-    public $gebruikerId;
+    private $projectId;
+    private $projectNaam;
+    private $projectBeginDatum;
+    private $projectEindDatum;
+    private $projectKlantNummer;
+    private $projectBezetting;
+    private $projectKost;
+    private $projectMaterialen;
+    private $gebruikerId;
 
     /**
      * @return mixed

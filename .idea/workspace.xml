@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6ddcb7-90b1-466d-ba00-4165df913167" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/model/PDOEventTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/model/Test.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/model/Event.php" afterPath="$PROJECT_DIR$/app/model/Event.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/controller/EventControllerTest.php" afterPath="$PROJECT_DIR$/test/controller/EventControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/model/PDOEventTest.php" afterPath="$PROJECT_DIR$/test/model/PDOEventTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="$PROJECT_DIR$/vendor/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +34,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="EventControllerTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/controller/EventControllerTest.php">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
+            <state relative-caret-position="352">
+              <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -41,8 +47,8 @@
       <file leaf-file-name="PDOEventTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/model/PDOEventTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="226">
+              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
               <folding>
                 <element signature="e#6#90#0#PHP" expanded="true" />
                 <element signature="e#128#151#0#PHP" expanded="true" />
@@ -51,21 +57,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/database.php">
+      <file leaf-file-name="Test.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/model/Test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="23" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JsonResponse.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/view/JsonResponse.php">
+      <file leaf-file-name="autoload.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="154">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="composer.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/composer.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -81,24 +97,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PDOEvent.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/PDOEvent.php">
+      <file leaf-file-name="JsonResponse.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/JsonResponse.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="14" />
-              <folding>
-                <element signature="e#3492#4024#0#PHP" expanded="false" />
-                <element signature="e#4030#4659#0#PHP" expanded="false" />
-                <element signature="e#4665#5423#0#PHP" expanded="false" />
-                <element signature="e#5429#6283#0#PHP" expanded="false" />
-                <marker date="1492373953881" expanded="true" signature="534:763" ph="INSERT INTO projecten... " />
-                <marker date="1492373953881" expanded="true" signature="1693:1991" ph="UPDATE proje... " />
-                <marker date="1492373953881" expanded="true" signature="2940:2988" ph="SELECT * FRO... projecten" />
-                <marker date="1492373953881" expanded="true" signature="3567:3590" ph="SELECT * FRO... projecten" />
-                <marker date="1492373953881" expanded="true" signature="4112:4157" ph="SELECT * FRO... projecten" />
-                <marker date="1492373953881" expanded="true" signature="4762:4853" ph="SELECT * FRO... projecten" />
-                <marker date="1492373953881" expanded="true" signature="5553:5667" ph="SELECT * FRO... projecten" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventJsonView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/EventJsonView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -106,7 +120,7 @@
       <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
+            <state relative-caret-position="264">
               <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="21" />
               <folding>
                 <element signature="e#34#61#0#PHP" expanded="true" />
@@ -115,31 +129,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/app.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EventFactory.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/EventFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
+            <state relative-caret-position="352">
               <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Event.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/model/Event.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -171,10 +165,17 @@
       <command text="composer require altorouter/altorouter 1.1   " />
       <command text="composer dump-autoload-o" />
       <command text="composer dump-autoload -o" />
+      <command text="jasper is dom" />
+      <command text="composer dump-autoload -o" />
+      <command text="composer --version" />
+      <command text="composer dump-autoload -o" />
     </commandsHistory>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -193,7 +194,6 @@
         <option value="$PROJECT_DIR$/src/view/EventJsonView.php" />
         <option value="$PROJECT_DIR$/src/model/PDOPersonRepository.php" />
         <option value="$PROJECT_DIR$/app/composer.json" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/api/api.php" />
         <option value="$PROJECT_DIR$/app/model/PDOPersonRepository.php" />
         <option value="$PROJECT_DIR$/app/model/Person.php" />
@@ -220,6 +220,7 @@
         <option value="$PROJECT_DIR$/test/controller/EventControllerTest.php" />
         <option value="$PROJECT_DIR$/app/model/PDOEventTest.php" />
         <option value="$PROJECT_DIR$/app/model/Event.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/test/model/PDOEventTest.php" />
       </list>
     </option>
@@ -255,7 +256,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -265,7 +265,57 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.jetbrains.php.config.library.PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="PHP Runtime" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="standard" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
               <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="composer" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -393,6 +443,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -530,69 +581,70 @@
       <workItem from="1492178138020" duration="4242000" />
       <workItem from="1492189521552" duration="8837000" />
       <workItem from="1492198956580" duration="9176000" />
-      <workItem from="1492420140614" duration="15131000" />
+      <workItem from="1492420140614" duration="16993000" />
+      <workItem from="1492517489419" duration="1202000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PDOEventTest - 2017.04.17 at 11h 32m 47s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 16h 10m 25s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 16h 13m 22s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 16h 16m 28s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 16h 23m 49s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 16h 36m 10s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 16h 36m 56s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 17h 44m 34s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.17 at 18h 15m 24s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="PDOEventTest - 2017.04.17 at 18h 31m 06s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 13h 51m 53s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 13h 52m 23s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 05m 16s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 11m 39s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 14m 24s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 14m 53s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 18m 22s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 28m 58s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.04.18 at 14h 29m 20s.xml">
       <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79375000" />
+    <option name="totallyTimeSpent" value="82439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33699232" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3413831" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33699232" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3413831" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -609,7 +661,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/composer.json" />
     <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -655,13 +706,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TODO.MD">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -703,20 +747,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/PDOPersonRepository.php" />
     <entry file="file://$PROJECT_DIR$/app/controller/PersonController.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php" />
     <entry file="file://$PROJECT_DIR$/app/config/routes.php" />
     <entry file="file://$PROJECT_DIR$/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -732,9 +768,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="13" selection-end-column="62" />
-          <folding>
-            <element signature="e#6#91#0#PHP" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -760,16 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1452">
-          <caret line="70" column="22" lean-forward="false" selection-start-line="70" selection-start-column="22" selection-end-line="70" selection-end-column="22" />
-          <folding>
-            <element signature="e#150#173#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/model/PDOEventsRepositoryTests.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="242">
@@ -778,19 +802,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/PDOEventTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="8" lean-forward="false" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/PDOEventTest.php" />
     <entry file="file://$PROJECT_DIR$/monkeybusiness.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="109" column="33" lean-forward="false" selection-start-line="109" selection-start-column="32" selection-end-line="109" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -802,53 +818,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/EventJsonView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="106">
-          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/JsonResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/model/Event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="52" column="42" lean-forward="true" selection-start-line="52" selection-start-column="42" selection-end-line="52" selection-end-column="42" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/EventFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#34#61#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -864,21 +838,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/app.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="54" />
+          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/PDOEvent.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
+        <state relative-caret-position="264">
           <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="14" />
           <folding>
             <element signature="e#3492#4024#0#PHP" expanded="false" />
@@ -896,10 +869,84 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/EventFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="21" />
+          <folding>
+            <element signature="e#34#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/Response.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/JsonResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/EventJsonView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="21" column="51" lean-forward="true" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/Test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test/model/PDOEventTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="226">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding>
             <element signature="e#6#90#0#PHP" expanded="true" />
             <element signature="e#128#151#0#PHP" expanded="true" />

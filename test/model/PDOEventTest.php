@@ -8,8 +8,14 @@
 
 namespace test\model\PDOEventTest;
 
-use App\Model\PDOEvent;
-use App\Model\Event;
+require "C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\vendor\\autoload.php";
+require_once 'C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\app\model\\Event.php';
+require_once 'C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\app\model\\PDOEvent.php';
+require_once 'C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\app\model\\EventFactory.php';
+
+use \App\Model\PDOEvent;
+use \App\Model\Event;
+use \App\Model\EventFactory;
 use PDO;
 
 class PDOMock extends PDO {
@@ -19,8 +25,8 @@ class PDOMock extends PDO {
 class PDOEventTest extends \PHPUnit_Framework_TestCase
 {
 
-    private $mockPDO;
-    private $mockPDOStatement;
+    //private $mockPDO;
+    //private $mockPDOStatement;
 
     public function setUp()
     {
@@ -37,24 +43,9 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $this->mockPDOStatement = null;
     }
 
-    public function testAddEventLastIdEqualsGetEventByPersonId() {
+    public function testAddEventLast_IdEqualsGetEventByPersonId_SameID() {
         $event = new Event();
 
-        $this->mockPDOStatement->expects($this->atLeastOnce())
-            ->method('bindParam');
-
-        $this->mockPDOStatement->expects($this->atLeastOnce())
-            ->method('execute');
-        $this->mockPDOStatement->expects($this->atLeastOnce())
-            ->method('fetchAll')
-            ->will($this->returnValue(
-                [
-                    [ 'id' => $event->getId() ]
-                ]));
-        $this->mockPDO->expects($this->atLeastOnce())
-            ->method('prepare')
-            ->will($this->returnValue($this->mockPDOStatement));
-        $pdoEvent = new PDOEvent($this->mockPDO);
         $projectNaam = "JasperProject";
         $projectBeginDatum = new \DateTime(date_default_timezone_get());
         $projectEindDatum = new \DateTime(date_default_timezone_get());
@@ -70,6 +61,21 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $event->setProjectKost($projectKost);
         $event->setProjectMaterialen($projectMaterialen);
 
+        $this->mockPDOStatement->expects($this->Once())
+            ->method('bindParam');
+        $this->mockPDOStatement->expects($this->Once())
+            ->method('execute');
+        $this->mockPDOStatement->expects($this->Once())
+            ->method('fetchAll')
+            ->will($this->returnValue(
+                [
+                    [ 'id' => $event->getProjectId() ]
+                ]));
+        $this->mockPDO->expects($this->Once())
+            ->method('prepare')
+            ->will($this->returnValue($this->mockPDOStatement));
+
+        $pdoEvent = new PDOEvent($this->mockPDO);
 
         $lastInsertId = $pdoEvent->addEvent($event->getProjectNaam(), $event->getProjectBeginDatum(), $event->getProjectEindDatum(),
             $event->getKlantNummer(), $event->getProjectBezetting(), $event->getProjectKost(), $event->getProjectMaterialen(),

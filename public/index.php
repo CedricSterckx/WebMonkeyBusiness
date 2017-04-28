@@ -17,6 +17,7 @@ use App\Controller\EventController;
 use App\View\EventJsonView;
 use \PDO;
 use \AltoRouter;
+use App\Controller\GebruikerController;
 
 $pdo = null;
 
@@ -77,6 +78,42 @@ try {
     $router->map('POST|PUT', '/event/create/', function () use (&$eventController) {
         $data = json_decode(file_get_contents("php://input"), true);
         $eventController->handleUpdateOrCreateEvent($data);
+    });
+
+    /*
+     *  START GEBRUIKER MAPPINGS
+     *
+     */
+
+    $gebruikerController = new GebruikerController($pdo);
+
+
+    $router->map('GET', '/gebruikers/', function () use (&$gebruikerController) {
+        $gebruikerController->handleGetAllGebruikers();
+    });
+
+    $router->map('GET', '/gebruiker/[i:id]', function ($id) use (&$gebruikerController) {
+        $gebruikerController->handleGetGebruikerByGebruikerId($id);
+    });
+
+    $router->map('GET', '/gebruikers/name/[a:action]', function ($name) use (&$gebruikerController) {
+        $gebruikerController->handleGetGebruikerByGebruikerName($name);
+    });
+
+    $router->map('GET', '/gebruikers/country/[a:action]', function ($country) use (&$gebruikerController) {
+        $gebruikerController->handleGetGebruikerByGebruikerGemeente($country);
+    });
+
+    $router->map('GET', '/gebruikers/type/[a:action]', function ($type) use (&$gebruikerController) {
+        $gebruikerController->handleGetGebruikerByGebruikerType($type);
+    });
+
+    $router->map('GET', '/gebruikers/telephonenumber/[a:action]', function ($telephonenumber) use (&$gebruikerController) {
+        $gebruikerController->handleGetGebruikerByGebruikerTelefoon($telephonenumber);
+    });
+    $router->map('POST|PUT', '/gebruiker/create', function () use (&$gebruikerController) {
+        $data = json_decode(file_get_contents("php://input"), true);
+        $gebruikerController->handleUpdateOrCreateGebruiker($data);
     });
 
     $match = $router->match();

@@ -8,6 +8,7 @@
 
 namespace App\View;
 
+use App\Model\Event;
 use App\View\JsonResponse;
 
 class AllEventsJsonView extends JsonResponse

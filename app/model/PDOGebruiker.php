@@ -21,11 +21,11 @@ class PDOGebruiker
     }
 
 
-    public function addGebruiker($gebruikerNaam, $gebruikerVoornaam, $gebruikerPostCode, $gebruikerGemeente, $gebruikerStraat, $gebruikerHuisnummer, $gebruikerTelefoon, $gebruikerGsm, $gebruikerMail, $gebruikerType)
+    public function addGebruiker($gebruikerNaam, $gebruikerVoornaam, $gebruikerPostCode, $gebruikerGemeente, $gebruikerStraat, $gebruikerHuisnummer, $gebruikerTelefoon, $gebruikerGsm, $gebruikerMail, $gebruikerType, $lat, $lon)
     {
         try {
-            $statement = $this->connection->prepare('INSERT INTO projecten (GebruikerNaam,GebruikerVoornaam,GebruikerPostcode,GebruikerGemeente,GebruikerStraat,GebruikerHuisnummer,GebruikerTelefoon,GebruikerGSM,GebruikerMail,GebruikerType)' .
-                ' VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?);');
+            $statement = $this->connection->prepare('INSERT INTO projecten (GebruikerNaam,GebruikerVoornaam,GebruikerPostcode,GebruikerGemeente,GebruikerStraat,GebruikerHuisnummer,GebruikerTelefoon,GebruikerGSM,GebruikerMail,GebruikerType, lat, lon)' .
+                ' VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);');
             $statement->bindParam(1, $gebruikerNaam);
             $statement->bindParam(2, $gebruikerVoornaam);
             $statement->bindParam(3, $gebruikerPostCode);
@@ -36,6 +36,8 @@ class PDOGebruiker
             $statement->bindParam(8, $gebruikerGsm);
             $statement->bindParam(9, $gebruikerMail);
             $statement->bindParam(10, $gebruikerType);
+            $statement->bindParam(11, $lat);
+            $statement->bindParam(12, $lon);
             $statement->execute();
 
             $last_id = $this->connection->lastInsertId();
@@ -47,12 +49,12 @@ class PDOGebruiker
         }
     }
 
-    public function updateGebruiker($gebruikerId, $gebruikerNaam, $gebruikerVoornaam, $gebruikerPostCode, $gebruikerGemeente, $gebruikerStraat, $gebruikerHuisnummer, $gebruikerTelefoon, $gebruikerGsm, $gebruikerMail, $gebruikerType)
+    public function updateGebruiker($gebruikerId, $gebruikerNaam, $gebruikerVoornaam, $gebruikerPostCode, $gebruikerGemeente, $gebruikerStraat, $gebruikerHuisnummer, $gebruikerTelefoon, $gebruikerGsm, $gebruikerMail, $gebruikerType, $lat, $long)
     {
         $sql = "UPDATE projecten SET
         GebruikerNaam = :naam, GebruikerVoornaam = :voornaam , GebruikerPostCode = :postcode,
          GebruikerGemeente = :gemeente, GebruikerStraat = :straat, GebruikerHuisnummer = :huisnummer,
-          GebruikerTelefoon = :telefoon, GebruikerGSM = :gsm, GebruikerMail = :mail, GebruikerType = :gebruikertype
+          GebruikerTelefoon = :telefoon, GebruikerGSM = :gsm, GebruikerMail = :mail, GebruikerType = :gebruikertype, lat = :lat, lon = :lon
              WHERE GebruikerID=:id";
 
         try {
@@ -68,6 +70,8 @@ class PDOGebruiker
             $statement->bindValue(':gsm', $gebruikerGsm);
             $statement->bindValue(':mail', $gebruikerMail);
             $statement->bindValue(':gebruikertype', $gebruikerType);
+            $statement->bindValue(':lat', $lat);
+            $statement->bindValue(':lon', $lon);
             $statement->execute();
 
             return $gebruikerId;
@@ -198,5 +202,23 @@ class PDOGebruiker
         }
 
         return $result;
+    }
+
+    public function updateGebruikerGeoLocation($id, $lat, $lon)
+    {
+        $sql = "UPDATE gebruikers SET lat = :lat, lon = :lon WHERE GebruikerID=:id";
+
+        try {
+            $statement = $this->connection->prepare($sql);
+            $statement->bindValue(':id', $id);
+            $statement->bindValue(':lat', $lat);
+            $statement->bindValue(':lon', $lon);
+            $statement->execute();
+
+            return $id;
+        } catch (PDOException $e) {
+            print 'Exception while trying update a user: ' . $e->getMessage();
+        }
+
     }
 }

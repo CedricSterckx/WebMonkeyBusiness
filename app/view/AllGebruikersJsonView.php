@@ -30,7 +30,9 @@ class AllGebruikersJsonView extends JsonResponse
                     'gebruikerTelefoon' => $gebruiker->getGebruikerTelefoon(),
                     'gebruikerGsm' => $gebruiker->getGebruikerGSM(),
                     'gebruikerMail' => $gebruiker->getGebruikerMail(),
-                    'gebruikerType' => $gebruiker->getGebruikerType()
+                    'gebruikerType' => $gebruiker->getGebruikerType(),
+                    'lat' => $gebruiker->getLat(),
+                    'lon' => $gebruiker->getLon()
                 ]);
             }
         }

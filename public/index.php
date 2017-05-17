@@ -111,9 +111,15 @@ try {
     $router->map('GET', '/gebruikers/telephonenumber/[a:action]', function ($telephonenumber) use (&$gebruikerController) {
         $gebruikerController->handleGetGebruikerByGebruikerTelefoon($telephonenumber);
     });
+
+    $router->map('POST', '/gebruiker/geolocationSave/', function () use (&$gebruikerController) {
+        $data = json_decode(file_get_contents("php://input"), true);
+        $gebruikerController->saveLocationToGebruiker($data);
+    });
+
     $router->map('POST|PUT', '/gebruiker/create', function () use (&$gebruikerController) {
         $data = json_decode(file_get_contents("php://input"), true);
-        $gebruikerController->handleUpdateOrCreateGebruiker($data);
+        $gebruikerController->saveLocationToGebruiker($data);
     });
 
     $match = $router->match();

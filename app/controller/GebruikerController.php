@@ -34,9 +34,9 @@ class GebruikerController
     public function handleUpdateOrCreateGebruiker($data)
     {
         if (!isset($data['id'])) {
-            $createdGebruikerId = $this->gebruiker->addGebruiker($data['gebruikerNaam'], $data['gebruikerVoornaam'], $data['gebruikerPostCode'], $data['gebruikerGemeente'], $data['gebruikerStraat'], $data['gebruikerHuisnummer'], $data['gebruikerTelefoon'], $data['gebruikerGsm'], $data['gebruikerMail'], $data['gebruikerType']);
+            $createdGebruikerId = $this->gebruiker->addGebruiker($data['gebruikerNaam'], $data['gebruikerVoornaam'], $data['gebruikerPostCode'], $data['gebruikerGemeente'], $data['gebruikerStraat'], $data['gebruikerHuisnummer'], $data['gebruikerTelefoon'], $data['gebruikerGsm'], $data['gebruikerMail'], $data['gebruikerType'], $data['lat'], $data['lon']);
         } else {
-            $createdGebruikerId = $this->gebruiker->updateGebruiker($data['id'], $data['gebruikerNaam'], $data['gebruikerVoornaam'], $data['gebruikerPostCode'], $data['gebruikerGemeente'], $data['gebruikerStraat'], $data['gebruikerHuisnummer'], $data['gebruikerTelefoon'], $data['gebruikerGsm'], $data['gebruikerMail'], $data['gebruikerType']);
+            $createdGebruikerId = $this->gebruiker->updateGebruiker($data['id'], $data['gebruikerNaam'], $data['gebruikerVoornaam'], $data['gebruikerPostCode'], $data['gebruikerGemeente'], $data['gebruikerStraat'], $data['gebruikerHuisnummer'], $data['gebruikerTelefoon'], $data['gebruikerGsm'], $data['gebruikerMail'], $data['gebruikerType'], $data['lat'], $data['lon']);
         }
         $this->handleGetGebruikerByGebruikerId($createdGebruikerId);
         $view = new GebruikerJsonView();
@@ -86,5 +86,20 @@ class GebruikerController
         $gebruikers = $this->gebruiker->getGebruikerByGebruikerTelefoon($telephonenumber);
         $view = new AllGebruikersJsonView();
         $view->draw(compact('gebruikers'));
+    }
+
+    public function saveLocationToGebruiker($data)
+    {
+        $createdGebruikerId = $this->gebruiker->updateGebruikerGeoLocation($data['id'], $data['lat'], $data['lon']);
+        $this->handleGetGebruikerByGebruikerId($createdGebruikerId);
+        $view = new GebruikerJsonView();
+        $view->draw(compact($data));
+    }
+
+    public function getGeoLocationOfUser($id)
+    {
+        $gebruiker = $this->gebruiker->getGebruikerByGebruikerId($id);
+        $view = new AllGebruikersJsonView();
+        $view->draw(compact('gebruiker'));
     }
 }

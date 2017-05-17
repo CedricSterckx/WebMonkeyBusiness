@@ -22,6 +22,8 @@ class Gebruiker
     private $gebruikerGsm;
     private $gebruikerMail;
     private $gebruikerType;
+    private $lat;
+    private $lon;
 
     /**
      * @return mixed
@@ -199,5 +201,37 @@ class Gebruiker
         $this->gebruikerType = $gebruikerType;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getLon()
+    {
+        return $this->lon;
+    }
 
-   }
+    /**
+     * @param mixed $lon
+     */
+    public function setLon($lon)
+    {
+        $this->lon = $lon;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLat()
+    {
+        return $this->lat;
+    }
+
+    /**
+     * @param mixed $lat
+     */
+    public function setLat($lat)
+    {
+        $this->lat = $lat;
+    }
+
+
+}

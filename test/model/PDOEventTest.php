@@ -27,12 +27,17 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
     //private $mockPDO;
     //private $mockPDOStatement;
 
+    /**
+     *
+     */
     public function setUp()
     {
-        $this->mockPDO = $this->getMockBuilder('PDOMock')
+        $this->mockPDO = $this->getMockBuilder('\PDO')
+            ->disableOriginalConstructor()
             ->getMock();
         $this->mockPDOStatement =
-            $this->getMockBuilder('PDOStatement')
+            $this->getMockBuilder('\PDOStatement')
+                ->disableOriginalConstructor()
                 ->getMock();
 
         $this->event = new Event();

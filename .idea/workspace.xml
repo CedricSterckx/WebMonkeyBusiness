@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df6ddcb7-90b1-466d-ba00-4165df913167" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controller/GebruikerController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/Gebruiker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/GebruikerFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/model/PDOGebruiker.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/AllGebruikersJsonView.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/view/GebruikerJsonView.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/WebMonkeyBusiness.iml" afterPath="$PROJECT_DIR$/.idea/WebMonkeyBusiness.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/view/AllEventsJsonView.php" afterPath="$PROJECT_DIR$/app/view/AllEventsJsonView.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.php" afterPath="$PROJECT_DIR$/public/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/model/PDOEventTest.php" afterPath="$PROJECT_DIR$/test/model/PDOEventTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -32,24 +25,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="461">
-              <caret line="111" column="67" lean-forward="false" selection-start-line="111" selection-start-column="67" selection-end-line="111" selection-end-column="67" />
-              <folding>
-                <element signature="e#150#173#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="GebruikerController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/GebruikerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="376">
-              <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+            <state relative-caret-position="218">
+              <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
               <folding>
                 <element signature="e#123#158#0#PHP" expanded="true" />
               </folding>
@@ -57,20 +38,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PDOGebruiker.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PDOGebruiker.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/model/PDOGebruiker.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="181" column="51" lean-forward="false" selection-start-line="181" selection-start-column="51" selection-end-line="181" selection-end-column="51" />
+            <state relative-caret-position="358">
+              <caret line="102" column="24" lean-forward="false" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
               <folding>
-                <marker date="1493219402026" expanded="true" signature="586:831" ph="INSERT INTO projecten... " />
-                <marker date="1493219402026" expanded="true" signature="1928:2295" ph="UPDATE proje... " />
-                <marker date="1493219402026" expanded="true" signature="3381:3429" ph="SELECT * FRO... gebruikers" />
-                <marker date="1493219402026" expanded="true" signature="4024:4048" ph="SELECT * FRO... gebruikers" />
-                <marker date="1493219402026" expanded="true" signature="4595:4656" ph="SELECT * FRO... gebruikers" />
-                <marker date="1493219402026" expanded="true" signature="5289:5348" ph="SELECT * FRO... gebruikers" />
-                <marker date="1493219402026" expanded="true" signature="5974:6026" ph="SELECT * FRO... gebruikers" />
-                <marker date="1493219402026" expanded="true" signature="6661:6728" ph="SELECT * FRO... gebruikers" />
+                <marker date="1494400906164" expanded="true" signature="586:831" ph="INSERT INTO projecten... " />
+                <marker date="1494400906164" expanded="true" signature="1928:2295" ph="UPDATE proje... " />
+                <marker date="1494400906164" expanded="true" signature="3381:3429" ph="SELECT * FRO... gebruikers" />
+                <marker date="1494400906164" expanded="true" signature="4024:4048" ph="SELECT * FRO... gebruikers" />
+                <marker date="1494400906164" expanded="true" signature="4595:4656" ph="SELECT * FRO... gebruikers" />
+                <marker date="1494400906164" expanded="true" signature="5289:5348" ph="SELECT * FRO... gebruikers" />
+                <marker date="1494400906164" expanded="true" signature="5974:6026" ph="SELECT * FRO... gebruikers" />
+                <marker date="1494400906164" expanded="true" signature="6661:6728" ph="SELECT * FRO... gebruikers" />
               </folding>
             </state>
           </provider>
@@ -79,11 +60,102 @@
       <file leaf-file-name="EventController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="71" column="53" lean-forward="true" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+            <state relative-caret-position="834">
+              <caret line="71" column="53" lean-forward="false" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
               <folding>
                 <element signature="e#34#61#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllEventsJsonView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/AllEventsJsonView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PDOEvent.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/model/PDOEvent.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <marker date="1492373953881" expanded="true" signature="534:763" ph="INSERT INTO projecten... " />
+                <marker date="1492373953881" expanded="true" signature="1693:1991" ph="UPDATE proje... " />
+                <marker date="1492373953881" expanded="true" signature="2940:2988" ph="SELECT * FRO... projecten" />
+                <marker date="1492373953881" expanded="true" signature="3567:3590" ph="SELECT * FRO... projecten" />
+                <marker date="1492373953881" expanded="true" signature="4112:4157" ph="SELECT * FRO... projecten" />
+                <marker date="1492373953881" expanded="true" signature="4762:4853" ph="SELECT * FRO... projecten" />
+                <marker date="1492373953881" expanded="true" signature="5553:5667" ph="SELECT * FRO... projecten" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AllGebruikersJsonView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/AllGebruikersJsonView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PDOEventsRepositoryTests.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/model/PDOEventsRepositoryTests.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PDOEventTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/model/PDOEventTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+              <folding>
+                <element signature="e#6#90#0#PHP" expanded="true" />
+                <element signature="e#518#542#0#PHP" expanded="true" />
+                <marker date="1494404219496" expanded="true" signature="2795:2836" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="4128:4169" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="5527:5568" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="6475:6516" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="7449:7492" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="8415:8458" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="9428:9504" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="10508:10584" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="11380:11403" ph="SELECT * FRO... projecten" />
+                <marker date="1494404219496" expanded="true" signature="11489:11512" ph="SELECT * FRO... projecten" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PDOPersonRepositoryTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/Desktop/excercise2/test/model/PDOPersonRepositoryTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EventJsonView.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/view/EventJsonView.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,7 +250,6 @@
         <option value="$PROJECT_DIR$/app/model/Event.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/model/PDOEvent.php" />
-        <option value="$PROJECT_DIR$/test/model/PDOEventTest.php" />
         <option value="$PROJECT_DIR$/app/view/GebruikerJsonView/GebruikerJsonView.php" />
         <option value="$PROJECT_DIR$/app/model/Gebruiker.php" />
         <option value="$PROJECT_DIR$/app/view/AllEventsJsonView.php" />
@@ -188,6 +259,7 @@
         <option value="$PROJECT_DIR$/public/index.php" />
         <option value="$PROJECT_DIR$/app/controller/GebruikerController.php" />
         <option value="$PROJECT_DIR$/app/model/PDOGebruiker.php" />
+        <option value="$PROJECT_DIR$/test/model/PDOEventTest.php" />
       </list>
     </option>
   </component>
@@ -199,10 +271,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1048" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -222,6 +294,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -255,6 +328,38 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
@@ -270,6 +375,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
@@ -291,9 +418,22 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WebMonkeyBusiness" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -435,25 +575,11 @@
       <workItem from="1492420140614" duration="16993000" />
       <workItem from="1492517489419" duration="26650000" />
       <workItem from="1493209454404" duration="10407000" />
+      <workItem from="1494400965073" duration="4855000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PDOEventTest - 2017.04.18 at 17h 06m 12s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.18 at 17h 22m 29s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.18 at 17h 27m 36s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.18 at 17h 28m 27s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PDOEventTest - 2017.04.18 at 17h 29m 17s.xml">
-      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="PDOEventTest - 2017.04.18 at 19h 38m 04s.xml">
       <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -469,35 +595,50 @@
     <history-entry file="PDOEventTest - 2017.04.19 at 01h 02m 02s.xml">
       <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="PDOEventTest - 2017.05.10 at 09h 51m 06s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.05.10 at 09h 52m 28s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.05.10 at 09h 56m 04s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.05.10 at 09h 57m 52s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="PDOEventTest - 2017.05.10 at 10h 17m 11s.xml">
+      <configuration name="PDOEventTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="118294000" />
+    <option name="totallyTimeSpent" value="123149000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18887262" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18854167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33596215" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3358946" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3413831" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +654,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Desktop/WebAdvanced/example3/app.php" />
     <entry file="file://$PROJECT_DIR$/composer.lock">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -568,7 +708,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -599,15 +738,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="216" column="62" lean-forward="false" selection-start-line="216" selection-start-column="62" selection-end-line="216" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/PDOEventsRepositoryTests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,15 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -648,7 +769,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
           <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -656,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="41" lean-forward="false" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -664,78 +783,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1819">
           <caret line="107" column="20" lean-forward="false" selection-start-line="107" selection-start-column="3" selection-end-line="107" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/JsonResponse.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/Response.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/model/PDOEventTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="104" column="0" lean-forward="false" selection-start-line="104" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#90#0#PHP" expanded="true" />
-            <element signature="e#518#542#0#PHP" expanded="true" />
-            <marker date="1493209434444" expanded="true" signature="2684:2725" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="4017:4058" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="5416:5457" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="6364:6405" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="7338:7381" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="8304:8347" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="9317:9393" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="10397:10473" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="11269:11292" ph="SELECT * FRO... projecten" />
-            <marker date="1493209434444" expanded="true" signature="11378:11401" ph="SELECT * FRO... projecten" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/GebruikerJsonView/GebruikerJsonView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/GebruikerJsonView/GebruikerJsonView.php" />
     <entry file="file://$PROJECT_DIR$/app/model/Event.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1235">
           <caret line="83" column="5" lean-forward="false" selection-start-line="83" selection-start-column="5" selection-end-line="83" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/EventJsonView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/GebruikerJsonView.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -763,65 +819,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/AllEventsJsonView.php">
+    <entry file="file://$PROJECT_DIR$/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="1914">
+          <caret line="128" column="1" lean-forward="false" selection-start-line="128" selection-start-column="1" selection-end-line="128" selection-end-column="1" />
           <folding>
-            <element signature="e#6#93#0#PHP" expanded="false" />
-            <element signature="e#116#136#0#PHP" expanded="false" />
+            <element signature="e#150#173#0#PHP" expanded="false" />
+            <marker date="1494400906180" expanded="true" signature="3735:3748" ph="..." />
+            <marker date="1494400906180" expanded="true" signature="3735:3749" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/view/AllGebruikersJsonView.php">
+    <entry file="file://$PROJECT_DIR$/public/app.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="19" column="34" lean-forward="false" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        <state relative-caret-position="110">
+          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/model/PDOEvent.php">
+    <entry file="file://$PROJECT_DIR$/app/view/Response.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="156" column="21" lean-forward="true" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
-          <folding>
-            <marker date="1492522343143" expanded="true" signature="534:763" ph="INSERT INTO projecten... " />
-            <marker date="1492522343143" expanded="true" signature="1693:1991" ph="UPDATE proje... " />
-            <marker date="1492522343143" expanded="true" signature="2940:2988" ph="SELECT * FRO... projecten" />
-            <marker date="1492522343143" expanded="true" signature="3567:3590" ph="SELECT * FRO... projecten" />
-            <marker date="1492522343143" expanded="true" signature="4112:4157" ph="SELECT * FRO... projecten" />
-            <marker date="1492522343143" expanded="true" signature="4762:4853" ph="SELECT * FRO... projecten" />
-            <marker date="1492522343143" expanded="true" signature="5553:5667" ph="SELECT * FRO... projecten" />
-          </folding>
+        <state relative-caret-position="176">
+          <caret line="13" column="1" lean-forward="false" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/JsonResponse.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/GebruikerJsonView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="8" column="18" lean-forward="false" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/AllEventsJsonView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="20" column="45" lean-forward="false" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/EventJsonView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="13" column="1" lean-forward="true" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/EventController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="71" column="53" lean-forward="true" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
+        <state relative-caret-position="834">
+          <caret line="71" column="53" lean-forward="false" selection-start-line="71" selection-start-column="53" selection-end-line="71" selection-end-column="53" />
           <folding>
             <element signature="e#34#61#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="111" column="67" lean-forward="false" selection-start-line="111" selection-start-column="67" selection-end-line="111" selection-end-column="67" />
-          <folding>
-            <element signature="e#150#173#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controller/GebruikerController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="83" column="57" lean-forward="false" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+        <state relative-caret-position="218">
+          <caret line="55" column="42" lean-forward="false" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
           <folding>
             <element signature="e#123#158#0#PHP" expanded="true" />
           </folding>
@@ -830,17 +901,78 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/model/PDOGebruiker.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="181" column="51" lean-forward="false" selection-start-line="181" selection-start-column="51" selection-end-line="181" selection-end-column="51" />
+        <state relative-caret-position="358">
+          <caret line="102" column="24" lean-forward="false" selection-start-line="102" selection-start-column="24" selection-end-line="102" selection-end-column="24" />
           <folding>
-            <marker date="1493219402026" expanded="true" signature="586:831" ph="INSERT INTO projecten... " />
-            <marker date="1493219402026" expanded="true" signature="1928:2295" ph="UPDATE proje... " />
-            <marker date="1493219402026" expanded="true" signature="3381:3429" ph="SELECT * FRO... gebruikers" />
-            <marker date="1493219402026" expanded="true" signature="4024:4048" ph="SELECT * FRO... gebruikers" />
-            <marker date="1493219402026" expanded="true" signature="4595:4656" ph="SELECT * FRO... gebruikers" />
-            <marker date="1493219402026" expanded="true" signature="5289:5348" ph="SELECT * FRO... gebruikers" />
-            <marker date="1493219402026" expanded="true" signature="5974:6026" ph="SELECT * FRO... gebruikers" />
-            <marker date="1493219402026" expanded="true" signature="6661:6728" ph="SELECT * FRO... gebruikers" />
+            <marker date="1494400906164" expanded="true" signature="586:831" ph="INSERT INTO projecten... " />
+            <marker date="1494400906164" expanded="true" signature="1928:2295" ph="UPDATE proje... " />
+            <marker date="1494400906164" expanded="true" signature="3381:3429" ph="SELECT * FRO... gebruikers" />
+            <marker date="1494400906164" expanded="true" signature="4024:4048" ph="SELECT * FRO... gebruikers" />
+            <marker date="1494400906164" expanded="true" signature="4595:4656" ph="SELECT * FRO... gebruikers" />
+            <marker date="1494400906164" expanded="true" signature="5289:5348" ph="SELECT * FRO... gebruikers" />
+            <marker date="1494400906164" expanded="true" signature="5974:6026" ph="SELECT * FRO... gebruikers" />
+            <marker date="1494400906164" expanded="true" signature="6661:6728" ph="SELECT * FRO... gebruikers" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/view/AllGebruikersJsonView.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/PDOEventsRepositoryTests.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="1" lean-forward="false" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/model/PDOEvent.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <marker date="1492373953881" expanded="true" signature="534:763" ph="INSERT INTO projecten... " />
+            <marker date="1492373953881" expanded="true" signature="1693:1991" ph="UPDATE proje... " />
+            <marker date="1492373953881" expanded="true" signature="2940:2988" ph="SELECT * FRO... projecten" />
+            <marker date="1492373953881" expanded="true" signature="3567:3590" ph="SELECT * FRO... projecten" />
+            <marker date="1492373953881" expanded="true" signature="4112:4157" ph="SELECT * FRO... projecten" />
+            <marker date="1492373953881" expanded="true" signature="4762:4853" ph="SELECT * FRO... projecten" />
+            <marker date="1492373953881" expanded="true" signature="5553:5667" ph="SELECT * FRO... projecten" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Desktop/excercise2/test/model/PDOPersonRepositoryTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="10" column="12" lean-forward="true" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/model/PDOEventTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="35" column="42" lean-forward="true" selection-start-line="35" selection-start-column="42" selection-end-line="35" selection-end-column="42" />
+          <folding>
+            <element signature="e#6#90#0#PHP" expanded="true" />
+            <element signature="e#518#542#0#PHP" expanded="true" />
+            <marker date="1494404219496" expanded="true" signature="2795:2836" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="4128:4169" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="5527:5568" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="6475:6516" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="7449:7492" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="8415:8458" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="9428:9504" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="10508:10584" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="11380:11403" ph="SELECT * FRO... projecten" />
+            <marker date="1494404219496" expanded="true" signature="11489:11512" ph="SELECT * FRO... projecten" />
           </folding>
         </state>
       </provider>

@@ -73,6 +73,16 @@
                     + "EindDatum: " + j[0].eindDatum + "<br />" + "KlantNummer: " + j[0].KlantNummer + "<br />" + "Bezetting: "
                     + j[0].Bezetting + "<br />"+ "Kost: " + j[0].Kost + "<br />" + "Materialen: " + j[0].Materialen
                     + "<br />" + "GebruikerID: " + j[0].GebruikerId;
+
+            document.getElementById('ProjectID').value = j[0].id;
+            document.getElementById('ProjectNaam').value = j[0].naam;
+            document.getElementById('ProjectBeginDatum').value = j[0].beginDatum;
+            document.getElementById('ProjectEindDatum').value = j[0].eindDatum;
+            document.getElementById('ProjectKlantNummer').value = j[0].KlantNummer;
+            document.getElementById('ProjectBezetting').value = j[0].Bezetting;
+            document.getElementById('ProjectKost').value = j[0].Kost;
+            document.getElementById('ProjectMaterialen').value = j[0].Materialen;
+            document.getElementById('GebruikerID').value = j[0].GebruikerId;
         });
     }
 

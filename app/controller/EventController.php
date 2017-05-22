@@ -26,7 +26,7 @@ class EventController
 
     public function handleUpdateOrCreateEvent($data)
     {
-        if (!isset($data['id'])) {
+        if (!isset($data['id']) || $data['id'] == "" ) {
             $createdEventId = $this->event->addEvent($data['naam'], $data['beginDatum'], $data['eindDatum'], $data['KlantNummer'], $data['Bezetting'], $data['Kost'], $data['Materialen'], $data['GebruikerId']);
         } else {
             $createdEventId = $this->event->UpdateEvent($data['id'], $data['naam'], $data['beginDatum'], $data['eindDatum'], $data['KlantNummer'], $data['Bezetting'], $data['Kost'], $data['Materialen'], $data['GebruikerId']);

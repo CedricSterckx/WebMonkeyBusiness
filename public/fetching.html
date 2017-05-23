@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Wabalaba dub dub</title>
+    <style>
+        label {
+            display: block;
+        }
+
+        #zien {
+            display: block;
+            position: relative;
+            float: left;
+        }
+
+        #toevoegen {
+            display: block;
+            left: 100px;
+            position: relative;
+            float: left;
+        }
+
+    </style>
+
+</head>
+<body>
+<!--rij laten zien d.m.v ID-->
+<div id="zien">
+    <label>ID nummer
+    <input id="id" type="number"></label>
+    <input type="button" value="click me" onclick="myGetFunction()"/>
+    <label id="result"></label>
+</div>
+<!--rijen toevoegen-->
+<div id="toevoegen">
+    <label>ProjectID: <br />
+        <input id="ProjectID" type="number"></label>
+    <label>ProjectNaam: <br />
+        <input id="ProjectNaam" type="text"></label>
+    <label>ProjectBeginDatum: <br />
+        <input id="ProjectBeginDatum" type="date"></label>
+    <label>ProjectEindDatum: <br />
+        <input id="ProjectEindDatum" type="date"></label>
+    <label>ProjectKlantNummer: <br />
+        <input id="ProjectKlantNummer" type="number"></label>
+    <label>ProjectBezetting: <br />
+        <input id="ProjectBezetting" type="text"></label>
+    <label>ProjectKost: <br />
+        <input id="ProjectKost" type="number"></label>
+    <label>ProjectMaterialen: <br />
+        <input id="ProjectMaterialen" type="text"></label>
+    <label>GebruikerID: <br />
+        <input id="GebruikerID" type="number"></label>
+    <input type="button" value="click me" onclick="myPostFunction()"/>
+    <label id="done"></label>
+</div>
+<script type="text/javascript">
+
+    function myGetFunction() {
+// rij opvragen met id
+        const url =
+                "../../public/index.php/event/" + document.getElementById('id').value
+
+        fetch(url).then(function (response) {
+// Convert to JSON
+            return response.json();
+        }).then(function (j) {
+// lijst laten zien in de label met newline
+            console.log(j[0].naam);
+            document.getElementById('result').innerHTML ="Naam: " + j[0].naam + "<br />" + "BeginDatum: " + j[0].beginDatum + "<br />"
+                    + "EindDatum: " + j[0].eindDatum + "<br />" + "KlantNummer: " + j[0].KlantNummer + "<br />" + "Bezetting: "
+                    + j[0].Bezetting + "<br />"+ "Kost: " + j[0].Kost + "<br />" + "Materialen: " + j[0].Materialen
+                    + "<br />" + "GebruikerID: " + j[0].GebruikerId;
+
+            document.getElementById('ProjectID').value = j[0].id;
+            document.getElementById('ProjectNaam').value = j[0].naam;
+            document.getElementById('ProjectBeginDatum').value = j[0].beginDatum;
+            document.getElementById('ProjectEindDatum').value = j[0].eindDatum;
+            document.getElementById('ProjectKlantNummer').value = j[0].KlantNummer;
+            document.getElementById('ProjectBezetting').value = j[0].Bezetting;
+            document.getElementById('ProjectKost').value = j[0].Kost;
+            document.getElementById('ProjectMaterialen').value = j[0].Materialen;
+            document.getElementById('GebruikerID').value = j[0].GebruikerId;
+        });
+    }
+
+    function myPostFunction() {
+// rij toevoegen, opgelaten vakken geven default mee
+        fetch('../../public/index.php/event/create/', {
+            method: 'post',
+            body: JSON.stringify({
+                id: document.getElementById('ProjectID').value,
+                naam: document.getElementById('ProjectNaam').value,
+                beginDatum: document.getElementById('ProjectBeginDatum').value,
+                eindDatum: document.getElementById('ProjectEindDatum').value,
+                KlantNummer: document.getElementById('ProjectKlantNummer').value,
+                Bezetting: document.getElementById('ProjectBezetting').value,
+                Kost: document.getElementById('ProjectKost').value,
+                Materialen: document.getElementById('ProjectMaterialen').value,
+                GebruikerId: document.getElementById('GebruikerID').value
+            })
+        });
+        document.getElementById('done').innerHTML = "Kijk in Database";
+    }
+
+
+</script>
+</body>
+</html>

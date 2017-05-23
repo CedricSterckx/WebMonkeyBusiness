@@ -79,14 +79,14 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
             ->will($this->returnValue([['ProjectID' => $this->event->getProjectId()]]));
         $this->mockPDO->expects($this->Once())
             ->method('prepare')
-            ->with($this->equalTo('SELECT * FROM projecten WHERE ProjectID=?'))
+            ->with($this->equalTo('SELECT * FROM projecten WHERE ProjectID = :id'))
             ->will($this->returnValue($this->mockPDOStatement));
 
         $pdoEvent = new PDOEvent($this->mockPDO);
 
         $lastInsertId = $pdoEvent->addEvent($this->event->getProjectNaam(), $this->event->getProjectBeginDatum(), $this->event->getProjectEindDatum(),
-            $this->event->getKlantNummer(), $this->event->getProjectBezetting(), $this->event->getProjectKost(), $this->event->getProjectMaterialen(),
-            $this->event.getGebruikerId());
+            $this->event->getProjectKlantNummer(), $this->event->getProjectBezetting(), $this->event->getProjectKost(), $this->event->getProjectMaterialen(),
+            $this->event->getGebruikerId());
         $result = $pdoEvent.getEventByPersonId($lastInsertId);
         $this->assertEquals($result[0], $lastInsertId);
     }
@@ -110,7 +110,7 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $pdoEvent = new PDOEvent($this->mockPDO);
 
         $projectId = 20;
-        $lastUpdatedId = $this->event->UpdateEvent($projectId, $this->event->getProjectNaam(), $this->event->getProjectBeginDatum(),
+        $lastUpdatedId = $this->$pdoEvent->UpdateEvent($projectId, $this->event->getProjectNaam(), $this->event->getProjectBeginDatum(),
             $this->event->getProjectEindDatum(), $this->event->getProjectKlantNummer(),
             $this->event->getProjectBezetting(), $this->event->getProjectKost(), $this->event->getProjectMaterialen(),
             $this->event.getGebruikerId());
@@ -219,7 +219,7 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $pdoEvent = new PDOEvent($this->mockPDO);
         $event = $pdoEvent->getEventByDate($this->event->setProjectBeginDatum(), $this->event->setProjectEindDatum());
         $this->assertEquals($event, $this->event);
-    }
+}
 
     public function testGetEvent_ByDate_Null() {
         $wrongDate = new \DateTime();

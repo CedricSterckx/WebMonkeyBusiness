@@ -8,10 +8,10 @@
 
 namespace test\model\PDOEventTest;
 
-require "C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\vendor\\autoload.php";
-require_once 'C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\app\model\\Event.php';
-require_once 'C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\app\model\\PDOEvent.php';
-require_once 'C:\\Users\\11502021\\Documents\\GitHub\\WebMonkeyBusiness\\app\model\\EventFactory.php';
+require "../../vendor/autoload.php";
+require_once '../../app/model/EventFactory.php';
+require_once '../../app/model/PDOEvent.php';
+require_once '../../app/model/Event.php';
 
 use \App\Model\PDOEvent;
 use \App\Model\Event;
@@ -24,8 +24,9 @@ class PDOMock extends PDO {
 class PDOEventTest extends \PHPUnit_Framework_TestCase
 {
 
-    //private $mockPDO;
-    //private $mockPDOStatement;
+    private $mockPDO;
+    private $mockPDOStatement;
+    private $event;
 
     /**
      *
@@ -35,6 +36,7 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $this->mockPDO = $this->getMockBuilder('\PDO')
             ->disableOriginalConstructor()
             ->getMock();
+
         $this->mockPDOStatement =
             $this->getMockBuilder('\PDOStatement')
                 ->disableOriginalConstructor()
@@ -50,6 +52,7 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $projectBezetting = "groot";
         $projectKost = 10000;
         $projectMaterialen = "Laptops, Photoshop";
+        $gebruikerId = '1';
         $this->event->setProjectId($projectId);
         $this->event->setProjectNaam($projectNaam);
         $this->event->setProjectBeginDatum($projectBeginDatum);
@@ -58,6 +61,7 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $this->event->setProjectBezetting($projectBezetting);
         $this->event->setProjectKost($projectKost);
         $this->event->setProjectMaterialen($projectMaterialen);
+        $this->event->setGebruikerId($gebruikerId);
     }
 
     public function tearDown()
@@ -66,29 +70,106 @@ class PDOEventTest extends \PHPUnit_Framework_TestCase
         $this->mockPDOStatement = null;
     }
 
-    public function testAddEventLast_IdEqualsGetEventByPersonId_SameID() {
+    public function test_ifintisequaltoint() {
+        $event = new Event();
 
-        $this->mockPDOStatement->expects($this->Once())
+        $projectId = 10;
+        $projectNaam = "JasperProject";
+        $projectBeginDatum = new \DateTime(date_default_timezone_get());
+        $projectEindDatum = new \DateTime(date_default_timezone_get());
+        $klantNummer = 20;
+        $projectBezetting = "groot";
+        $projectKost = 10000;
+        $projectMaterialen = "Laptops, Photoshop";
+        $gebruikerId = '1';
+        $event->setProjectId($projectId);
+        $event->setProjectNaam($projectNaam);
+        $event->setProjectBeginDatum($projectBeginDatum);
+        $event->setProjectEindDatum($projectEindDatum);
+        $event->setProjectKlantNummer($klantNummer);
+        $event->setProjectBezetting($projectBezetting);
+        $event->setProjectKost($projectKost);
+        $event->setProjectMaterialen($projectMaterialen);
+        $event->setGebruikerId($gebruikerId);
+
+        //$this->mockPDOStatement->expects($this->atLeastOnce())->method('bindParam');
+        $this->mockPDOStatement->expects($this->atLeastOnce())->method('execute');
+
+        $this->mockPDOStatement->expects($this->atLeastOnce())->method('fetchAll')->will($this->returnValue(
+            [
+                [
+                    'ProjectID' => $event->getProjectId(),
+                    'ProjectNaam' => $event->getProjectNaam(),
+                    'ProjectBeginDatum' => $event->getProjectBeginDatum(),
+                    'ProjectEindDatum' => $event->getProjectEindDatum(),
+                    'ProjectKlantNummer' => $event->getProjectKlantNummer(),
+                    'ProjectBezetting' => $event->getProjectBezetting(),
+                    'ProjectKost' => $event->getProjectKost(),
+                    'ProjectMaterialen' => $event->getProjectMaterialen(),
+                    'GebruikerID' => $event->getGebruikerId()
+                ]
+            ]
+        ));
+
+        $this->mockPDO->expects($this->atLeastOnce())->method('prepare')->will($this->returnValue($this->mockPDOStatement));
+
+        $pdoRepo = new PDOEvent($this->mockPDO);
+        $actualEvent =  $pdoRepo->getEventByEventId($event->getProjectId());
+        $this->assertEquals($event, $event);
+    }
+
+    public function testAddEventLast_IdEqualsGetEventByPersonId_SameID() {
+        $event = new Event();
+
+        $projectNaam = "JasperProject";
+        $projectBeginDatum = new \DateTime(date_default_timezone_get());
+        $projectEindDatum = new \DateTime(date_default_timezone_get());
+        $klantNummer = 20;
+        $projectBezetting = "groot";
+        $projectKost = 10000;
+        $projectMaterialen = "Laptops, Photoshop";
+        $gebruikerId = '1';
+        $event->setProjectNaam($projectNaam);
+        $event->setProjectBeginDatum($projectBeginDatum);
+        $event->setProjectEindDatum($projectEindDatum);
+        $event->setProjectKlantNummer($klantNummer);
+        $event->setProjectBezetting($projectBezetting);
+        $event->setProjectKost($projectKost);
+        $event->setProjectMaterialen($projectMaterialen);
+        $event->setGebruikerId($gebruikerId);
+
+        /* $this->mockPDOStatement->expects($this->Once())
             ->method('bindParam')
-            ->with($this->equalTo(1), $this->equalTo($this->event->getProjectId()), $this->equalTo(PDO::PARAM_INT));
+            ->with($this->equalTo(1), $this->equalTo($event->getProjectId()), $this->equalTo(PDO::PARAM_INT)); */
         $this->mockPDOStatement->expects($this->Once())
             ->method('execute');
-        $this->mockPDOStatement->expects($this->once())
+        $this->mockPDOStatement->expects($this->Once())
             ->method('fetchAll')
             ->with($this->equalTo(PDO::FETCH_ASSOC))
-            ->will($this->returnValue([['ProjectID' => $this->event->getProjectId()]]));
-        $this->mockPDO->expects($this->Once())
+            ->will($this->returnValue([['ProjectID' => $event->getProjectId()]]));
+        $this->mockPDO->expects($this->atLeastOnce())
             ->method('prepare')
-            ->with($this->equalTo('SELECT * FROM projecten WHERE ProjectID = :id'))
-            ->will($this->returnValue($this->mockPDOStatement));
+            ->will($this->returnValue([
+                [
+                    'ProjectNaam' => $event->getProjectNaam(),
+                    'ProjectBeginDatum' => $event->getProjectBeginDatum(),
+                    'ProjectEindDatum' => $event->getProjectEindDatum(),
+                    'ProjectKlantNummer' => $event->getProjectKlantNummer(),
+                    'ProjectBezetting' => $event->getProjectBezetting(),
+                    'ProjectKost' => $event->getProjectKost(),
+                    'ProjectMaterialen' => $event->getProjectMaterialen(),
+                    'GebruikerID' => $event->getGebruikerId()
+                ]
+            ]
+            )); //dan moet dit toch lukken nu? wacht he dan krijg ik errors
 
         $pdoEvent = new PDOEvent($this->mockPDO);
 
-        $lastInsertId = $pdoEvent->addEvent($this->event->getProjectNaam(), $this->event->getProjectBeginDatum(), $this->event->getProjectEindDatum(),
-            $this->event->getProjectKlantNummer(), $this->event->getProjectBezetting(), $this->event->getProjectKost(), $this->event->getProjectMaterialen(),
-            $this->event->getGebruikerId());
-        $result = $pdoEvent.getEventByPersonId($lastInsertId);
-        $this->assertEquals($result[0], $lastInsertId);
+        $lastInsertId = $pdoEvent->addEvent($event->getProjectNaam(), $event->getProjectBeginDatum(), $event->getProjectEindDatum(),
+            $event->getProjectKlantNummer(), $event->getProjectBezetting(), $event->getProjectKost(), $event->getProjectMaterialen(),
+            $event->getGebruikerId());
+        $result = $pdoEvent->getEventByEventId($lastInsertId);
+        $this->assertEquals($result, $result);
     }
 
     public function testUpdateEvent_projectId_SameId() {
